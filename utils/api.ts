@@ -1,4 +1,4 @@
-import { Character } from '../types';
+import { Character } from './types';
 
 const API_BASE_URL = 'https://hp-api-onrender.com/';
 
@@ -6,7 +6,7 @@ export const fetchCharacters = async (): Promise<Character[]> => {
     try {
         const response = await fetch(`${API_BASE_URL}characters`);
         const data = await response.json();
-        return data:
+        return data;
     } catch (error) {
         console.error('Error fetching characters:', error);
         return [];
